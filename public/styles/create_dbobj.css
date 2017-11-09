@@ -1,0 +1,91 @@
+.body_div {
+	width: 100%;
+
+}
+.add_object {
+	display: inline-block;
+	position:relative;
+	width: 75%;
+	height: 600px;
+	background: rgb(250, 250, 250);
+	border: 1px solid gray;
+	margin-top: 20px;
+	margin-left: 12.5%;
+	border-radius: 5px;	
+	
+}
+#top_a {
+	height: 25px;
+	background: gray;
+	text-align: left;
+	padding: 3px;
+}
+#top_b {
+	width: 50%;
+	height: 18px;
+	background: gray;
+	text-align: left;
+	padding: 1px;
+	font-size: 16px;
+}
+.body_aa {
+	width: 94%;
+	height: 28px;
+	border: 1px solid gray;
+	margin-left: 3%;
+	margin-top: 10px;
+}
+.body_a {
+	width: 94%;
+	height: 28px;
+	border-bottom: 1px solid gray;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+	margin-left: 3%;
+}
+.body_b {
+	display: inline-block;
+	width: 30%;
+	min-width: 200px;
+	height: 28px;
+	border-right: 1px solid gray;
+	font-size: 18px;
+	vertical-align: middle;
+	line-height:28px;
+}
+.body_c {
+	width: 69%;
+	min-width: 200px;
+	height: 28px;
+	display: inline-block;
+	
+}
+.body_e {
+	
+	height: 27px;
+	font-size: 18px;	
+}
+.inp_add {
+	font-size: 16px;
+	width: 80%;
+	min-width: 150px;
+	margin-left: 3px;
+	margin-top: 3px;
+	vertical-align: middle;
+}
+.btn {
+	position: absolute;
+	width: 100px;
+	height: 30px;
+	bottom: 20px;
+	right: 20px;
+	background: rgb(200, 200, 200);
+	box-shadow: 0 0 4px black;
+	border: 1px solid rgb(160, 160, 160);
+	border-radius: 4px;
+	font-size: 18px;
+	vertical-align: middle;
+	text-align: center;
+	line-height:28px;
+	cursor: pointer;
+}
