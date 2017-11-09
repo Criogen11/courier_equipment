@@ -26,7 +26,7 @@
 	background: gray;
 	text-align: left;
 	padding: 1px;
-	font-size: 16px;
+	font-size: 18px;
 }
 .body_aa {
 	width: 94%;
@@ -67,11 +67,31 @@
 }
 .inp_add {
 	font-size: 16px;
-	width: 80%;
+	width: 95%;
 	min-width: 150px;
 	margin-left: 3px;
 	margin-top: 3px;
 	vertical-align: middle;
+}
+.body_ab {
+	width: 94%;
+	height: 28px;
+	border: 1px solid gray;
+	margin-left: 3%;
+}
+.body_abс {
+	width: 94%;
+	height: 28px;
+	margin-left: 3%;
+	margin-top: 20px;
+	text-align: left;
+	vertical-align: middle;
+}
+.inp_radio {
+	font-size: 16px;
+	width: 5%;
+	margin-left: 3px;
+	margin-top: 3px;	
 }
 .btn {
 	position: absolute;
@@ -89,3 +109,4 @@
 	line-height:28px;
 	cursor: pointer;
 }
+

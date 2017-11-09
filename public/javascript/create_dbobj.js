@@ -18,7 +18,7 @@ $(document).ready(function() {
                 data: {"cou": courier, "tab": tab, "rider": rider, "key": type_c},
                 success: function(data) {
                     //var data_a = JSON.parse(data)
-                    console.log(data);
+                    alert(data);
                 }
             });
         

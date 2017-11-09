@@ -6,6 +6,7 @@ class CreatePlanshets < ActiveRecord::Migration[5.1]
   		t.text :sn
 			t.date :date_create
 			t.boolean :work
+			t.boolean :delet
 			t.text :comment
 
   		t.timestamps
