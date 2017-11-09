@@ -7,6 +7,7 @@ class Apply_db
         @data_tab = tab
         @data_rider = rider
         @type_courier = key
+        
     end
     def test 
         aaa =  @data_tab
@@ -37,6 +38,12 @@ class Apply_db
             end   
             
         end    
+    end
+    def off_ecuipment
+        data_t = Planshet.where("work = ?", false)
+        data_r = Rider.where("work = ?", false)
+        data = {0 => data_t, 1 => data_r}
+        return data = data.to_json
     end    
  
 end     

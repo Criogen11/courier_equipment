@@ -13,3 +13,9 @@ post '/create_dbobject' do
 	data = query.insert_db
 	erb data
 end	
+
+post '/add_rab_rider' do	
+	querya = Apply_db.new(params[:cou], params[:tab], params[:rider], params[:key])
+	data = querya.off_ecuipment
+	erb data
+end	

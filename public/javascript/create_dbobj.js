@@ -1,6 +1,25 @@
 $(document).ready(function() {
     document.querySelector('.date').valueAsDate = new Date();
 
+    if ($("#add_tab").prop('checked')) {
+        console.log("Флажок установлен");
+    } else {
+      console.log("Флажок не установлен");
+    }
+
+    function add_tab_and_rider() {   //  Добавляем выбор выключенных планшетов и ридеров
+        $.post({
+            url: "/add_rab_rider",
+            data: {"cou": "courier", "tab": "tab", "rider": "rider", "key": "type_c"},
+            success: function(data) {
+                var aa = JSON.parse(data)
+                console.log(aa);
+            }
+        });
+    }
+
+    add_tab_and_rider();
+
     function inuit_db_ins(create_arr, create_tab, create_rider) {
         var courier = JSON.stringify(create_arr);
         var tab = JSON.stringify(create_tab);
@@ -47,7 +66,8 @@ $(document).ready(function() {
             } else {
                 alert('Не заполнены необходимые поля для Курьер на личном авто');
             }
-        
+            var aaa = $('input[name="add_tab"]').val();
+            console.log(aaa);
         
     });
 
