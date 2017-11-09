@@ -7,6 +7,7 @@ class CreateCouriers < ActiveRecord::Migration[5.1]
 			t.text :type_courier
 			t.boolean :work
 			
+			
   		t.timestamps
   	end	
   end

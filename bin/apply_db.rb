@@ -18,7 +18,7 @@ class Apply_db
         data_r = JSON.parse(@data_rider)
         data['work'], data_t['work'], data_r['work'] = true, true, true
         if (@type_courier == 'personal_auto')
-        if (data_a = Couriers.create(data))
+        if (data_a = Courier.create(data))
             data_t['courier_id'], data_r['courier_id'] = data_a[:id], data_a[:id]
             if ((win_t = Planshet.create(data_t)) && (win_r = Rider.create(data_r)))
                 return "Запись удалась!"
@@ -27,7 +27,7 @@ class Apply_db
             return 'Запись не удалась!'
         end
         elsif (@type_courier == 'auto_company_granta' || @type_courier == 'auto_company_sobol')  
-            if (data_a = Couriers.create(data))
+            if (data_a = Courier.create(data))
                 data_t['courier_id'] = data_a[:id]
                 if (win_t = Planshet.create(data_t))
                     return "Запись удалась!"

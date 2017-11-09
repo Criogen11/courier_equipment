@@ -1,6 +1,6 @@
 
 
-class Couriers < ActiveRecord::Base
+class Courier < ActiveRecord::Base
 
 end
 

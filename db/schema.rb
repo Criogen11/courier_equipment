@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20171030093324) do
     t.text "sn"
     t.date "date_create"
     t.boolean "work"
+    t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 20171030093324) do
     t.text "sn"
     t.date "date_create"
     t.boolean "work"
+    t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
