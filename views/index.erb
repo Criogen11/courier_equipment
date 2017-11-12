@@ -2,7 +2,10 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>AxioCouriers</title>
-	<link rel="stylesheet" href="../styles/styles.css"/>  
+	<script type="text/javascript" src="../javascript/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="../javascript/index/left_menu.js"></script>
+	<link rel="stylesheet" href="../styles/styles.css"/> 
+	<link rel="stylesheet" href="../styles/styles_index.css"/> 
 </head>
 <body>
 	<div>
@@ -12,6 +15,112 @@
 				<div id="add_object">Добавить</div>
 			</a>
 		</div>	
+	</div>
+	<div class="body_general">
+		<div class="left_menu">
+			<div class="lm_eq_sel">
+				<select type="text" name="type_equipment" class="sel_eq" value="">
+					<option >Курьер</option>
+					<option >Планшет</option>
+					<option >Ридер</option>
+					<option >POS принтер</option>
+				</select>
+			</div>
+			<div class="btn_sel_eq">Применить</div>
+		</div>
+		<div class="left_menu_filter view left_menu_courier">
+			<div class="aa_a">ФИО</div>
+			<div class="aa_b">
+				<input type="text" name="courier_name" class="inp_menu sel_eq"/>
+			</div>
+			<div class="aa_a">Дата создания</div>
+			<div class="aa_b">
+				<input type="date" name="courier_date" class="inp_menu sel_eq inp_date"/>
+			</div>
+			<div class="aa_a">ИП</div>
+			<div class="aa_b">
+				<select type="date" name="courier_company" class="inp_menu sel_eq">
+					<option >Шорохов</option>
+					<option >Буров</option>
+					<option >Шакурова</option>
+					<option >Шакуров</option>
+				</select>
+			</div>
+			<div class="aa_a">Тип курьера</div>
+			<div class="aa_b">
+				<select type="text" name="courier_type" class="inp_menu sel_eq">
+				<option >Личный авто</option>
+				<option >Гранта</option>
+				<option >Соболь</option>
+				<option >Пешый</option>
+				</select>
+			</div>
+			<div class="aa_bс">
+				<label><input type="checkbox" name="courier_work" class="check_inp">Уволен</label>
+			</div>
+			<div class="btn_go btn_courier">Применить</div>
+		</div>
+		<div class="left_menu_filter view left_menu_tab">
+			<div class="aa_a">Модель планшета</div>
+			<div class="aa_b">
+				<select type="text" name="tab_model" class="inp_menu sel_eq">
+					<option >Lenovo A3500</option>
+					<option >Lenovo A3000</option>
+					<option >Oysters T72ER</option>
+					<option >Beeline TAB2</option>
+					<option >HUAWEI MediaPadT1 7.0</option>
+				</select>
+			</div>
+			<div class="aa_a">Серийный номер</div>
+			<div class="aa_b">
+				<input type="text" name="sn_tab" class="inp_menu sel_eq"/>
+			</div>
+			<div class="aa_a">Дата создания</div>
+			<div class="aa_b">
+				<input type="date" name="tab_date" class="inp_menu sel_eq inp_date"/>
+			</div>
+			<div class="aa_bс">
+				<label><input type="checkbox" name="tab_work" class="check_inp">Свободный</label>
+			</div>
+			<div class="aa_bс">
+				<label><input type="checkbox" name="tab_del" class="check_inp">Удален</label>
+			</div>
+			<div class="btn_go btn_tab">Применить</div>
+		</div>
+		<div class="left_menu_filter view left_menu_rider">
+			<div class="aa_a">Модель ридера</div>
+			<div class="aa_b">
+				<select type="text" name="rider_model" class="inp_menu sel_eq">
+					<option >P15</option>
+					<option >C15</option>
+				</select>
+			</div>
+			<div class="aa_a">Серийный номер</div>
+			<div class="aa_b">
+				<input type="text" name="sn_rider" class="inp_menu sel_eq"/>
+			</div>
+			<div class="aa_a">Дата создания</div>
+			<div class="aa_b">
+				<input type="date" name="rider_date" class="inp_menu sel_eq inp_date"/>
+			</div>
+			<div class="aa_bс">
+				<label><input type="checkbox" name="rider_work" class="check_inp">Свободный</label>
+			</div>
+			<div class="aa_bс">
+				<label><input type="checkbox" name="rider_del" class="check_inp">Удален</label>
+			</div>
+			<div class="btn_go btn_rider">Применить</div>
+		</div>
+		<div class="left_menu_filter view left_menu_printer">Принтер
+		
+		</div>
+		<div class="body_post">
+			<div class="bpost_head">
+				<p>Курьеры</p>
+			</div>
+			<div class="post_finish">
+			</div>
+		</div>
 	</div>
 </body>
 </html>
