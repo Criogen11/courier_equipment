@@ -6,13 +6,13 @@ $(document).ready(function() {
         var data_r = data[1];
         var str = "";
         for(var i = 0; i < data_t.length; i++) {
-            str += "<option>" + "(" + data_t[i].id + ")&nbsp" + data_t[i].manufactured_company + 
+            str += "<option>" + "(" + data_t[i].id + ")" + " " + data_t[i].manufactured_company + 
             "&nbsp&nbsp&nbsp&nbsp" + data_t[i].sn + "</option>";        
         }
         $('.inp_add_tab').html(str);
         str = "";
         for(var i = 0; i < data_r.length; i++) {
-            str += "<option>" + "(" + data_r[i].id + ")&nbsp" + data_r[i].manufactured_company + 
+            str += "<option>" + "(" + data_r[i].id + ")" + " " + data_r[i].manufactured_company + 
             "&nbsp&nbsp&nbsp&nbsp" + data_r[i].sn + "</option>";        
         }
         $('.inp_add_rider').html(str);
@@ -46,8 +46,8 @@ $(document).ready(function() {
                 url: "/create_dbobject",
                 data: {"cou": courier, "tab": tab, "rider": rider, "key": type_c},
                 success: function(data) {
-                    //var data_a = JSON.parse(data)
                     alert(data);
+                    //console.log(data);
                 }
             });    
     }
@@ -61,25 +61,35 @@ $(document).ready(function() {
         var model_rider = $('select[name="model_rider"]').val();
         var sn_reder = $('input[name="sn_rider"]').val();
         var type_courier = $('select[name="type_courier"]').val();
-            if(name_courier != '' && sn_tab != '' && type_courier != '') {
+            if(name_courier != '') {
                 if ($("#add_tab").prop('checked')) {
-                    var create_tab = {"tab": $('select[name="choice_tab"]')}
+                     
+                    var create_tab = {"tab": $('select[name="choice_tab"]').val()}
                 } else {
-                    var create_tab =  {'manufactured_company': model_tab, 'sn': sn_tab,
-                                       'date_create': create_date};
+                    if (model_tab != '' && sn_tab != '') {
+                        var create_tab =  {'manufactured_company': model_tab, 'sn': sn_tab,
+                                           'date_create': create_date};
+                    } else {
+                        alert('Заполните информацию о плашете!');
+                    }
                 }
                 if ($("#add_tab").prop('checked')) {
-                    var create_rider = {"rider": $('select[name="choice_rider"]')}
+                    var create_rider = {"rider": $('select[name="choice_rider"]').val()}
                 } else {
-                    var create_rider =  {'manufactured_company': model_rider,
-                                         'sn': sn_reder, 'date_create': create_date};
+                    if (type_courier == 'Личный авто')
+                        if (model_rider != '' && sn_reder != '') {
+                            var create_rider =  {'manufactured_company': model_rider,
+                                                 'sn': sn_reder, 'date_create': create_date};
+                        } else {
+                            alert('Заполните информацию о ридере!');
+                        }                     
                 } 
                 var create_arr = {'name': name_courier, 'company': ind_p,
                                   'date_create': create_date,  'type_courier': type_courier}; 
-                                 
-                inuit_db_ins(create_arr, create_tab, create_rider);
-                console.log(create_arr);
-                
+                if (create_arr != '' && create_tab != '') {                 
+                    inuit_db_ins(create_arr, create_tab, create_rider);
+                    console.log(create_tab);
+                }   
             } else {
                 alert('Не заполнены необходимые поля');
             }       
