@@ -16,5 +16,30 @@ $(document).ready(function() {
         }
     });
 
-    
+    function go_filter(data) {
+        var key = data;
+        var arr_filter = {
+                          "courier": {
+                                      
+                                     }
+                         }
+    }
+
+    $('.btn_courier').click(function() {  
+        var str_c = 'courier';
+        go_filter(str_c);
+    });
+    $('.btn_tab').click(function() {  
+        var str_t = 'tab';
+        go_filter(str_t);
+    });
+    $('.btn_rider').click(function() {  
+        var str_r = 'rider';
+        go_filter(str_r);
+    });
+    $('.btn_printer').click(function() {  
+        var str_p = 'printer';
+        go_filter(str_p);
+    });
+            
 });
