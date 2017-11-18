@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20171030093324) do
   end
 
   create_table "planshets", force: :cascade do |t|
-    t.text "courier_id"
+    t.integer "courier_id"
     t.text "manufactured_company"
     t.text "sn"
     t.date "date_create"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20171030093324) do
   end
 
   create_table "riders", force: :cascade do |t|
-    t.text "courier_id"
+    t.integer "courier_id"
     t.text "manufactured_company"
     t.text "sn"
     t.date "date_create"

@@ -6,8 +6,7 @@ class Apply_db
         @data_courier = cou
         @data_tab = tab
         @data_rider = rider
-        @type_courier = key
-        
+        @type_courier = key   
     end
     def test 
         data_t = JSON.parse(@data_tab)
@@ -25,7 +24,11 @@ class Apply_db
         data = JSON.parse(@data_courier)
         data_t = JSON.parse(@data_tab)
         data_r = JSON.parse(@data_rider)
-        data['work'], data_t['work'], data_r['work'] = true, true, true
+        if(data_r == 'nill')
+            data['work'], data_t['work'] = true, true
+        else   
+            data['work'], data_t['work'], data_r['work'] = true, true, true
+        end    
         if (@type_courier == 'personal_auto')
             if (data_a = Courier.create(data))
                 if (data_t['tab'])

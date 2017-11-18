@@ -76,13 +76,16 @@ $(document).ready(function() {
                 if ($("#add_tab").prop('checked')) {
                     var create_rider = {"rider": $('select[name="choice_rider"]').val()}
                 } else {
-                    if (type_courier == 'Личный авто')
+                    if (type_courier == 'Личный авто') {
                         if (model_rider != '' && sn_reder != '') {
                             var create_rider =  {'manufactured_company': model_rider,
                                                  'sn': sn_reder, 'date_create': create_date};
                         } else {
                             alert('Заполните информацию о ридере!');
-                        }                     
+                        } 
+                    } else {
+                        var create_rider = 'nill';
+                    }                    
                 } 
                 var create_arr = {'name': name_courier, 'company': ind_p,
                                   'date_create': create_date,  'type_courier': type_courier}; 

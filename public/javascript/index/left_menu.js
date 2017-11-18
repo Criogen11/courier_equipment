@@ -1,18 +1,27 @@
 $(document).ready(function() {
     $('.btn_sel_eq').click(function() {
+        $('.bpost_head').html('');
         var aa = $('select[name="type_equipment"]').val();
         if (aa == 'Курьер') {
             $('div.view').css("visibility", "hidden");
             $('.left_menu_courier').css("visibility", "visible");
+            var str = '<p>Курьеры</p>';
+            $('.bpost_head').html(str);
         } else if (aa == 'Планшет') {
             $('div.view').css("visibility", "hidden");
             $('.left_menu_tab').css("visibility", "visible");
+            var str = '<p>Планшеты</p>';
+            $('.bpost_head').html(str);
         } else if (aa == 'Ридер') {
             $('div.view').css("visibility", "hidden");
             $('.left_menu_rider').css("visibility", "visible");
+            var str = '<p>Ридеры</p>';
+            $('.bpost_head').html(str);
         } else if (aa == 'POS принтер') {
             $('div.view').css("visibility", "hidden");
             $('.left_menu_printer').css("visibility", "visible");
+            var str = '<p>POS принтеры</p>';
+            $('.bpost_head').html(str);
         }
     });
 
