@@ -1,12 +1,17 @@
 class Courier_querydb
 
     def select(data_a)
-        as = data_a['name']
-        ass = Courier.where("name = ?", as)
-        ass_id = ass[0]['id']
-        aa = Planshet.where("courier_id = ?", ass_id)
-        data_ret = {'courier' => ass[0], 'rider' => aa[0]}
-        return data_ret.to_json
-    end
+        courier_name = data_a['name']
+        if(courier_name == 'full' && data_a['date_create'] == '' && data_a['company'] == '' && 
+           data_a['type_courier'] == '' && data_a['work'] == 'true')
+            query = Courier.select("id, name")
+            hash_res = {'key' => 'courier_name', "res" => query}
+            return hash_res.to_json
+        else
+            return 'да да да'
+        end    
+
+       
+    end 
 
 end    

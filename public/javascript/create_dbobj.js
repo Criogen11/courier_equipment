@@ -47,7 +47,8 @@ $(document).ready(function() {
                 data: {"cou": courier, "tab": tab, "rider": rider, "key": type_c},
                 success: function(data) {
                     alert(data);
-                    //console.log(data);
+                    //aa = JSON.parse(data)
+                    //console.log(aa);
                 }
             });    
     }
